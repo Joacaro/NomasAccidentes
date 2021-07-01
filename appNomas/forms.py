@@ -16,4 +16,4 @@ class LoginPostForm(forms.ModelForm):
 
 class postcontrato(forms.ModelForm):
     model=Contrato
-    fields=('folio','descripcion','fecha','firmaCli','firmaEmp',)
+    fields=('descripcion','fecha','firmaCli','firmaEmp',)

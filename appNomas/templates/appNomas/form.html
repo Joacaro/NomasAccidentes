@@ -7,6 +7,12 @@
     <title>Formulario</title>
 </head>
 <body>
-    
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }} 
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
 </body>
 </html>
