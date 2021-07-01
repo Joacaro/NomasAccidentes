@@ -1,7 +1,7 @@
 {%load static%}
 {% load widget_tweaks %}
-<html>
-    <head>
+<html lang="en">
+<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS only -->
@@ -9,22 +9,24 @@
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{% static 'css/logins.css' %}">
-        
-        <title>Iniciar Sesión</title>
+        <title>Registro</title>
     </head>
-    <body >
-        <div class="col-6 col-sm-4 col-md-3  center border color " >
-             <h2 class="">Iniciar sesión</h2>
-             <form method="POST" class="post-form">
+    <body>
+        <div class="col-6 col-sm-4 col-md-3 center border color " >
+            <h2>Registrar usuario</h2>
+            <form method="POST" class="post-form">
+                
                 {% csrf_token %}
-                {{ form.as_p }} 
+                <div style="text-align: center;">
+                    {{ form.as_p }}
+                </div>
                 <div>
-                    <button type="submit">Login</button>
+                    <button type="submit">Registrar</button>
                 </div>
             </form>
-            <div>
-                <a href="/register">Registrar usuario</a>
-                <a href="/">Volver</a>
-            </div>
-     </body>
+            
+            <a href="/login">Iniciar sesión</a>
+            <a href="/">Volver</a>
+        </div>
+    </body>
 </html>
