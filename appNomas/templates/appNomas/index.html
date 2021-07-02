@@ -9,12 +9,39 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <title>NomasAccidentes</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
-    <div class="col-12 center">
-        <img style="width: 90%; " class="logo" src="{% static 'Images/sinaccidente.png' %}">
+<body >
+    <div style="background-color: rgb(250, 250, 160); " class=" col-12 center row" >
+        <div class="row">
+            <div class="col-12 col-md-6 center">
+                <ul class="col-md-12">
+                    <li class="menu"><a href="#">Nuestros servicios</a></li>
+                    <li class="menu"><a href="#">Quienes somos</a></li>
+                    <li class="menu"><a href="#">Contacto</a></li>
+                    <li class="menu"><a href="login">Iniciar sesión</a></li>
+
+                </ul>
+            </div>
+        </div>
     </div>
-    <a href="login">Iniciar sesión</a>
+        <div class="col-12 center">
+            <div class="col-12 col-md-9" style="margin:auto">
+                <img style="width: 100%; " class="logo" src="{% static 'Images/sinaccidente.png' %}">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul class="col-md-12">    
+            <li>
+                <a href="#">Privacidad</a>
+                <a href="#">Informacion corporativa</a>
+            </li>
+            <li>Antonio Varas 666</li>
+            <li>Horario de atención: Lunes a Viernes 9:00 a 17:00</li>
+            <li>Telefono de Atención: Telefono fijo 123456789. Celulares 123456789</li>
+        </ul>   
+    </footer>
 </body>
 </html>
         

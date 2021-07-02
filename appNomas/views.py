@@ -4,7 +4,8 @@ from .backend import MyBackend
 from .forms import PostForm ,LoginPostForm,postcontrato
 
 # Create your views here.
-
+def welcome(request):
+    return render(request,'appNomas/welcome.html',{})
 def form(request):
     forms=postcontrato()
     return render(request, 'appNomas/form.html', {'forms':forms})
@@ -49,7 +50,7 @@ def login_user(request):
            
         if user is not None:
             login(request,user,backend='appNomas.backend.MyBackend')
-            return render(request, "appNomas/welcome.html")
+            return render(request, 'appNomas/welcome.html')
             
 
     # Si llegamos al final renderizamos el formulario
