@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate,login,logout as do_logout
 from .backend import MyBackend
-from .forms import PostForm ,LoginPostForm
+from .forms import PostForm ,LoginPostForm,postcontrato
+
 # Create your views here.
 
-def solicitar(request):
-    return render(request, 'appNomas/form.html', {})
+def form(request):
+    forms=postcontrato()
+    return render(request, 'appNomas/form.html', {'forms':forms})
 myBakend=MyBackend()
 def index(request):
     return render(request,'appNomas/index.html',{})

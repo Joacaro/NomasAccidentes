@@ -1,3 +1,5 @@
+{%load static%}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +11,10 @@
 <body>
     <form method="POST" class="post-form">
         {% csrf_token %}
-        {{ form.as_p }} 
+        {{ forms.as_p }} 
         <div>
-            <button type="submit">Login</button>
+            <button type="submit">Enviar</button>
+            <a href="/">Volver</a>
         </div>
     </form>
 </body>

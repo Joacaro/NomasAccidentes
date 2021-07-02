@@ -15,5 +15,6 @@ class LoginPostForm(forms.ModelForm):
         fields = ('rut','password')
 
 class postcontrato(forms.ModelForm):
-    model=Contrato
-    fields=('descripcion','fecha','firmaCli','firmaEmp',)
+    class Meta:
+        model = Contrato
+        fields = ('descripcion','fecha','firmaCli','firmaEmp')
